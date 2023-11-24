@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>用户注册</title>
+	<style type="text/css">
+		body {
+			background: LightGoldenRodYellow;
+		}
+		h1 {
+			text-align: center;
+		}
+		form {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 
+	--------------说明----------------------------------
+		<form>：创建一个表单
+			1、name属性：定义表单的名字
+			2、method属性：定义表单数据的提交方式  【两种选择：get 或者post】
+											    【(1)get：默认值，表单数据会附加在 action 属性的 URL 中，并以 ?作为分隔符，一般用于不敏感信息】
+											    【(2)post：表单数据会包含在表单体内然后发送给服务器，一般用于提交敏感数据，如用户名与密码等】
+			
+			3、action属性：定义表单提交之后的操作，跳转到某个网页
+
+			4、<input>用来输入数据，不同的type属性对应不同类型：
+				(1) text：文本输入框
+				(2) password：密码框
+				(3) radio：单选按钮
+				(4) checkbox：复选框
+				(5) submit：按钮
+			5、<select>定义一个下拉列表
+
+
+	<br>：用来换行
+	&nbsp：表示空格 
+	----------------------------------------------------
+	-->
+
+	<h1>新用户注册</h1>
+	<br><br>
+	<!-- ------------------------------------------------ -->
+	<!-- 任务要求 -->
+	<!-- 为了更好地了解请求访问你个人网站的用户的信息，请选择合适的表单元素并添加，文本框/密码框/单选框/复选框/下拉列表/按钮等都可以。要求不少于三个！！！ -->
+	<!-- 
+
+		提示：例如你想知道该用户是否喜欢某本书籍、某个运动、某首歌、某个电视剧、某个人物，则可以添加一个单选按钮：  
+		是否喜欢/看过：《三体》 <input type="radio" name="book" value="yes">是 <input type="radio" name="book" value="no">否
+	 -->
+
+	<!-- ------------------------------------------------ -->
+
+
+
+	<!-- action="form.html"的作用是点击提交按钮之后，可以跳转到10-demo6-自我介绍页.html到这个页面-->
+	<form name="register"  method="get" action="10-demo6-自我介绍页.html">
+		用户名：<input type="text" name="username">
+		<br><br>
+		密码：<input type="password" name="password">
+		<br><br>
+
+		确认密码：<input type="password" name="password">
+		<br><br>
+
+		性别：<input type="radio" name="sex" value="female">女 <input type="radio" name="sex" value="male">男
+		<br><br>
+
+		爱好：<input type="checkbox" name="hobby" value="singing">唱歌<input type="checkbox" name="hobby" value="reading">阅读<input type="checkbox" name="hobby" value="badminton">打羽毛球
+		<br><br>
+
+		班级：<select name="class">
+				<option value="801">801</option>
+				<option value="802">802</option>
+				<option value="803">803</option>
+				<option value="804">804</option>
+				<option value="805">805</option>
+				<option value="806">806</option>
+				<option value="807">807</option>
+				<option value="808">808</option>
+				<option value="809">809</option>
+				<option value="810">810</option>
+				<option value="811">811</option>
+				<option value="812">812</option>
+			</select>
+	
+		<br><br><br><br>
+
+		<input type="submit" name="submit" value="提交">
+		
+	</form>
+</body>
+</html>
